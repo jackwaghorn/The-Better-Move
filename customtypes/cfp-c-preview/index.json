@@ -1,0 +1,35 @@
+{
+  "id": "cfp-c-preview",
+  "json": {
+    "Main": {
+      "images": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "image": {
+              "type": "Image",
+              "config": {
+                "constraint": {},
+                "thumbnails": [],
+                "label": "Image"
+              }
+            },
+            "spread": {
+              "type": "Image",
+              "config": {
+                "constraint": {},
+                "thumbnails": [],
+                "label": "Spread"
+              }
+            }
+          },
+          "label": "Images"
+        }
+      }
+    }
+  },
+  "label": "cfp-c-preview",
+  "repeatable": false,
+  "status": true,
+  "format": "custom"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "gallery",
+  "json": {
+    "Main": {
+      "gallery": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "image": {
+              "type": "Image",
+              "config": {
+                "constraint": {},
+                "thumbnails": [],
+                "label": "Image"
+              }
+            }
+          },
+          "label": "Gallery"
+        }
+      }
+    }
+  },
+  "label": "Gallery",
+  "repeatable": false,
+  "status": true,
+  "format": "custom"
+}

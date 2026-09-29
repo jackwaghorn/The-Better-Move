@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+@theme {
+    --color-orange: #F0A754;
+    --color-yellow: #E8D482;
+    --color-purple:#C9ADE2;
+    --color-brown: #4D1D2F;
+    --color-pink: #E8A092;
+    --color-red: #85081D;
+    --color-grey: #D3D8C3;
+    --color-blue : #C4C7CD;
+
+}
+
+@font-face {
+    font-family: 'TBM Sans';
+    src: url('~/assets/fonts/TBM_sans.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TBM Sans';
+    src: url('~/assets/fonts/TBM_sans_Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root {
+    --text-4xl: 4rem;
+    --text-xl: 3.2rem;
+    --text-base: 1.6rem;
+    --text-2xl:1.1rem;
+    --text-sm: 0.9rem;
+    --text-tiny: 0.8rem;
+}
+
+/* md */
+@media (width >=48rem) {
+    :root {
+        --text-4xl: 8rem;
+        --text-xl: 4rem;
+        --text-base: 1.8rem;
+        --text-2xl: 1.3rem;
+        --text-sm: 0.9rem;
+        --text-tiny: 0.8rem;
+    }
+}
+
+/* lg */
+@media (width >=64rem) {
+    :root {
+        --text-4xl: 8.8rem;
+        --text-xl: 4.8rem;
+        --text-base: 2.4rem;
+        --text-2xl: 1.6rem;
+        --text-sm: 1.2rem;
+        --text-tiny: 0.8rem;
+    }
+}
+
+
+ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+html,
+body,
+#__nuxt {
+    background: #F0A754;
+}
+
+#__nuxt {
+    font-family: "TBM Sans", "Covik Sans", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #e8fcd4;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.overlay {
+    position: fixed;
+    z-index: 1000000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* background-image: url("@/assets/img/placeholder.jpg"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.lazyload,
+.lazyloading {
+    opacity: 0;
+}
+
+.lazyloaded {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.fade-enter-active {
+    transition: all 0.3s ease-out;
+}
+
+.fade-leave-active {
+    transition: all 0.3s ease-in;
+}
+
+.fade-enter-to,
+.fade-leave-from {
+    opacity: 1;
+}
+
+.btn-outline-light {
+    border-color: #e8fcd4 !important;
+    color: #e8fcd4 !important;
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus,
+.btn-outline-light:active,
+.btn-outline-light.active,
+.open>.dropdown-toggle.btn-outline-light {
+    background-color: #e8fcd4 !important;
+    color: #201f1d !important;
+}
+
+.share-button {
+    background-color: #e8fcd4 !important;
+}
+
+.share-button {
+    background-color: #e8fcd4 !important;
+    color: #201f1d !important;
+}
+
+.share-button__icon path {
+    fill: #201f1d !important;
+}

@@ -1,0 +1,40 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"body": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Dolor ad magna quis labore veniam nostrud."
+						}
+					}
+				]
+			},
+			"download_text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Adipisicing fugiat eu Lorem Lorem. Elit nulla adipisicing occaecat excepteur aute fugiat voluptate consectetur elit voluptate nostrud ea enim aute et."
+						}
+					}
+				]
+			},
+			"download_link": {
+				"__TYPE__": "LinkContent",
+				"key": "d90195e2-9f4b-478c-bc66-8aadcee083d2",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com",
+					"text": "record"
+				}
+			}
+		},
+		"items": []
+	}
+]

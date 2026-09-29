@@ -1,0 +1,31 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"column_one_body": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Fugiat enim id ipsum velit fugiat minim culpa qui."
+						}
+					}
+				]
+			},
+			"column_two_body": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Qui qui cillum eu velit laboris aliquip sit aliqua pariatur. Nisi adipisicing proident minim adipisicing quis."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

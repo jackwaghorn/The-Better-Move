@@ -1,0 +1,30 @@
+{
+  "name": "tbm-microsite",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "slicemachine": "start-slicemachine"
+  },
+  "dependencies": {
+    "@nuxt/fonts": "0.12.1",
+    "@nuxt/image": "2.0.0",
+    "@stefanobartoletti/nuxt-social-share": "2.3.0",
+    "@tailwindcss/vite": "^4.1.17",
+    "aos": "^2.3.4",
+    "better-sqlite3": "^12.5.0",
+    "nuxt": "^4.2.1",
+    "tailwindcss": "^4.1.17",
+    "vue": "^3.5.25",
+    "vue-router": "^4.6.3"
+  },
+  "devDependencies": {
+    "@nuxtjs/prismic": "4.1.0",
+    "@slicemachine/adapter-nuxt": "^0.3.88",
+    "slice-machine-ui": "^2.20.1"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "cfp-m-preview",
+  "json": {
+    "Main": {
+      "body": {
+        "type": "Slices",
+        "fieldset": "Slice zone",
+        "config": {
+          "labels": {},
+          "choices": {
+            "item": {
+              "type": "Slice",
+              "fieldset": "Item",
+              "description": "Image and text",
+              "icon": "art_track",
+              "display": "list",
+              "non-repeat": {
+                "name": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Name"
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "constraint": {},
+                    "thumbnails": [],
+                    "label": "Image"
+                  }
+                },
+                "spread": {
+                  "type": "Image",
+                  "config": {
+                    "constraint": {},
+                    "thumbnails": [],
+                    "label": "Spread"
+                  }
+                }
+              },
+              "repeat": {}
+            }
+          }
+        }
+      }
+    }
+  },
+  "label": "cfp-m-preview",
+  "repeatable": false,
+  "status": true,
+  "format": "custom"
+}

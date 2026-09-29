@@ -1,0 +1,47 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "plus",
+				"type": "Text"
+			},
+			"body": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Quis deserunt est aute sunt amet exercitation Lorem mollit officia cillum culpa id adipisicing laborum Lorem. Culpa ex commodo commodo nostrud commodo laborum laboris. Voluptate esse elit nostrud minim deserunt cillum elit laborum commodo."
+						}
+					}
+				]
+			},
+			"image": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f",
+					"width": 6000,
+					"height": 4000
+				},
+				"width": 6000,
+				"height": 4000,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f",
+				"alt": "porch",
+				"thumbnails": {}
+			}
+		},
+		"items": []
+	}
+]

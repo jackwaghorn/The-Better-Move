@@ -1,0 +1,18 @@
+/// <reference types="@nuxtjs/prismic" />
+/// <reference types="@nuxt/fonts" />
+/// <reference types="@stefanobartoletti/nuxt-social-share" />
+/// <reference types="@nuxt/devtools" />
+/// <reference types="@nuxt/image" />
+/// <reference types="@nuxt/telemetry" />
+/// <reference path="types/nitro-layouts.d.ts" />
+/// <reference path="types/modules.d.ts" />
+/// <reference path="types/runtime-config.d.ts" />
+/// <reference path="types/shared-app.config.d.ts" />
+/// <reference types="nuxt" />
+/// <reference path="../node_modules/.pnpm/@nuxt+vite-builder@4.5.2_@babel+plugin-syntax-jsx@7.29.7_@babel+core@7.29.7__@types+nod_f426a2b200fc9e689fca2ee26c6d572e/node_modules/@nuxt/vite-builder/dist/index.d.mts" />
+/// <reference path="../node_modules/.pnpm/@nuxt+nitro-server@4.5.2_4b324535a173879a92e7556db8403998/node_modules/@nuxt/nitro-server/dist/augments.d.mts" />
+/// <reference path="image/providers.d.ts" />
+/// <reference path="types/nitro-middleware.d.ts" />
+/// <reference path="schema/nuxt.schema.d.ts" />
+
+export {}

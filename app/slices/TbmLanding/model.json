@@ -1,0 +1,26 @@
+{
+  "id": "tbm_landing",
+  "type": "SharedSlice",
+  "name": "TbmLanding",
+  "description": "TbmLanding",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Subtitle",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
