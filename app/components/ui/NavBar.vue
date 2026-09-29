@@ -118,7 +118,6 @@ onMounted(() => {
         </div>
 
         <div>
-
         </div>
     <!-- Mobile menu -->
     <div class="w-full h-16 fixed  bg-yellow mobile-nav  z-100 md:hidden"

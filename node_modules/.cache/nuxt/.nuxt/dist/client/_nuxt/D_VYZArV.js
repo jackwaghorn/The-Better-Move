@@ -1,1 +1,0 @@
-import{F as e,f as t,y as n}from"./C3ATBC73.js";var r=n({__name:`slice-simulator`,setup(n){return(n,r)=>(e(),t(`div`))}});export{r as default};
