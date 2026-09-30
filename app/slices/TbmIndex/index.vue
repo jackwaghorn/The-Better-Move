@@ -24,10 +24,10 @@ defineProps(getSliceComponentProps<Content.TbmIndexSlice>());
     <!-- Text -->
     <div class="w-full flex md:flex-row flex-col items-start justify-center gap-4 md:gap-12 relative z-10">
       <div class="w-full md:w-5/12 tbm-about text-sm">
-        <PrismicRichText class="" :field="slice.primary.column_one_body" />
+        <PrismicRichText :field="slice.primary.column_one_body" />
       </div>
       <div class="w-full md:w-5/12 tbm-about text-sm">
-        <PrismicRichText class="" :field="slice.primary.column_two_body" />
+        <PrismicRichText :field="slice.primary.column_two_body" />
       </div>
     </div>
 

@@ -649,9 +649,6 @@ const _inlineRuntimeConfig = {
           "maxAge": 31536000
         }
       },
-      "/": {
-        "prerender": true
-      },
       "/_nuxt/builds/meta/**": {
         "headers": {
           "cache-control": "public, max-age=31536000, immutable"
@@ -661,10 +658,6 @@ const _inlineRuntimeConfig = {
         "headers": {
           "cache-control": "public, max-age=1, immutable"
         }
-      },
-      "/_payload.json": {
-        "ssr": true,
-        "prerender": true
       }
     }
   },
@@ -2400,7 +2393,6 @@ function exceedsMaxBytes(raw, maxBytes = MAX_ISLAND_BODY_BYTES) {
 	return Buffer.byteLength(raw, "utf8") > maxBytes;
 }
 
-const NUXT_PAYLOAD_INLINE = false;
 const NUXT_SSR_STREAMING = false;
 
 const headSymbol = "usehead";
@@ -2451,7 +2443,7 @@ function createSSRContext(event) {
 		url,
 		event,
 		runtimeConfig: useRuntimeConfig(event),
-		noSSR: event.context.nuxt?.noSSR || (false),
+		noSSR: true,
 		head: createHead(unheadOptions),
 		error: false,
 		nuxt: void 0,
@@ -2547,7 +2539,7 @@ const getSPARenderer = lazyCachedFunction(async () => {
 	};
 });
 function getRenderer(ssrContext) {
-	return ssrContext.noSSR ? getSPARenderer() : getSSRRenderer();
+	return getSPARenderer() ;
 }
 const getSSRStyles = lazyCachedFunction(() => Promise.resolve().then(function () { return styles$1; }).then((r) => r.default || r));
 
@@ -3227,7 +3219,7 @@ function renderPayloadJsonScript(opts) {
 		"type": "application/json",
 		"innerHTML": opts.data ? encodeForwardSlashes(stringify(opts.data, opts.ssrContext["~payloadReducers"])) : "",
 		"data-nuxt-data": appId,
-		"data-ssr": !(opts.ssrContext.noSSR)
+		"data-ssr": false
 	};
 	payload.id = "__NUXT_DATA__";
 	if (opts.src) payload["data-src"] = opts.src;
@@ -3293,7 +3285,6 @@ async function renderRoute(event, ssrError) {
 	const routeOptions = getRouteRules(event);
 	if (routeOptions.ssr === false) ssrContext.noSSR = true;
 	const _PAYLOAD_EXTRACTION = !ssrContext.noSSR && ((routeOptions.isr || routeOptions.cache));
-	const _PAYLOAD_INLINE = !_PAYLOAD_EXTRACTION || NUXT_PAYLOAD_INLINE;
 	const isRenderingPayload = (_PAYLOAD_EXTRACTION || routeOptions.prerender) && PAYLOAD_URL_RE.test(ssrContext.url);
 	if (isRenderingPayload) {
 		const payloadURL = new URL(ssrContext.url, "http://localhost");
@@ -3303,8 +3294,8 @@ async function renderRoute(event, ssrError) {
 		event._path = event.node.req.url = ssrContext.url;
 		getPayloadCacheKey(ssrContext.url);
 	}
-	const payloadURL = _PAYLOAD_EXTRACTION ? buildPayloadURL(ssrContext) : void 0;
-	const renderer = await getRenderer(ssrContext);
+	_PAYLOAD_EXTRACTION ? buildPayloadURL(ssrContext) : void 0;
+	const renderer = await getRenderer();
 	const canStream = NUXT_SSR_STREAMING;
 	const renderRouteContext = {
 		canStream,
@@ -3330,12 +3321,6 @@ async function renderRoute(event, ssrError) {
 	}
 	const NO_SCRIPTS = routeOptions.noScripts;
 	const { styles, scripts } = getRequestDependencies(ssrContext, renderer.rendererContext);
-	if (_PAYLOAD_EXTRACTION && !_PAYLOAD_INLINE && !NO_SCRIPTS) ssrContext.head.push({ link: [{
-		rel: "preload",
-		as: "fetch",
-		crossorigin: "anonymous",
-		href: payloadURL
-	} ] });
 	if (inlinedStyles.length) ssrContext.head.push({ style: inlinedStyles });
 	const link = [];
 	for (const resource of Object.values(styles)) {
@@ -3358,14 +3343,10 @@ async function renderRoute(event, ssrError) {
 		for (const l of getPreloadLinks(ssrContext, renderer.rendererContext, dependencyOptions)) if (!excludeHrefs.has(l.href)) hints.push(l);
 		for (const l of getPrefetchLinks(ssrContext, renderer.rendererContext, dependencyOptions)) if (!excludeHrefs.has(l.href)) hints.push(l);
 		ssrContext.head.push({ link: hints });
-		ssrContext.head.push({ script: _PAYLOAD_INLINE ? renderPayloadJsonScript({
+		ssrContext.head.push({ script: renderPayloadJsonScript({
 			ssrContext,
 			data: stripInlineOnlyPayloadFields(ssrContext.payload)
-		})  : renderPayloadJsonScript({
-			ssrContext,
-			data: splitPayload(ssrContext).initial,
-			src: payloadURL
-		})  }, {
+		})   }, {
 			tagPosition: "bodyClose",
 			tagPriority: "high"
 		});

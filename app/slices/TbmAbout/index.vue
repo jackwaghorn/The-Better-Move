@@ -26,7 +26,7 @@ defineProps(getSliceComponentProps<Content.TbmAboutSlice>());
   </span>
 </div>
 
-      <PrismicRichText class="" :field="slice.primary.body" />
+      <PrismicRichText :field="slice.primary.body" />
     </div>
   </section>
 </template>

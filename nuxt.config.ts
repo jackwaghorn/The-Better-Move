@@ -6,11 +6,12 @@ export default defineNuxtConfig({
   //   host: '0.0.0.0', 
   //   port: 3000,
   // },
-  nitro: {
-    prerender: {
-      routes: ['/'],
-    },
-  },
+  // nitro: {
+  //   prerender: {
+  //     routes: ['/'],
+  //   },
+  // },
+  ssr: false,
   app: {
     head: {
       htmlAttrs: {

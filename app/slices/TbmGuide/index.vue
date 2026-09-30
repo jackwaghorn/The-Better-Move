@@ -22,7 +22,7 @@ defineProps(getSliceComponentProps<Content.TbmGuideSlice>());
         </div>
       </div>
       <div class="w-full md:w-6/12 tbm-guide text-sm">
-        <PrismicRichText class="" :field="slice.primary.body" />
+        <PrismicRichText :field="slice.primary.body" />
       </div>
     </div>
 
