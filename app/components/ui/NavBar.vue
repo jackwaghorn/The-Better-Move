@@ -75,7 +75,6 @@ const bgPos = ref(-100)
 function slideBg(link) {
   slideViaHover.value = true;
   bgPos.value = link.pos;
-  console.log(link)
 }
 
 function defaultBg() {
@@ -121,9 +120,9 @@ onMounted(() => {
         </div>
     <!-- Mobile menu -->
     <div class="w-full h-16 fixed  bg-yellow mobile-nav  z-100 md:hidden"
-      :class="[menuOpen ? 'rounded-none' : 'rounded-[50px]']">
+      >
       <div :class="[menuOpen ? 'translate-y-0' : 'translate-y-full']"
-        class="ease-[cubic-bezier(0.77,_0.2,_0.05,_1)] duration-500 bg-green transition top-0 fixed bottom-0 left-0 right-0 w-screen h-screen">
+        class="ease-[cubic-bezier(0.77,_0.2,_0.05,_1)] duration-500 bg-yellow transition top-0 fixed bottom-0 left-0 right-0 w-screen h-screen">
         <div class="w-full mt-10 flex flex-col text-black p-5 ">
           <div @click="changeChapter(link, index)" v-for="(link, index) in links" :key="index"
             class="text-start my-3 first:hidden">

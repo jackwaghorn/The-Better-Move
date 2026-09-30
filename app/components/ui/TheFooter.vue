@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="w-full mt-auto bg-blue text-brown grid items-start md:grid-cols-3 gap-10 md:gap-4 py-4 md:py-12 px-12 text-tiny leading-4 md:leading-6"
+    class="w-full mt-auto bg-blue text-brown grid items-start md:grid-cols-3 gap-10 md:gap-4 py-4 md:py-12 px-4 md:px-12 text-tiny leading-4 md:leading-6"
   >
     <!-- Col 1 -->
     <div class="text-start">
@@ -31,7 +31,7 @@
       TBM is a project by VibeLab in collaboration with Stichting Dynamic Arts and to the
       floor e.V., and co-funded by the European Union.
 
-      <div class="flex justify-center item-center">
+      <div class="flex justify-center item-center pt-4">
 
         <div class="w-6/12 m-auto h-full items-center justify-center m-auto">
           <img loading="lazy" src="~/assets/images/eu-logo.png" class="w-10/12 h-auto" />

@@ -5,8 +5,8 @@ defineProps(getSliceComponentProps<Content.TbmAboutSlice>());
 </script>
 
 <template>
-  <section id="about" class="bg-pink flex justify-center gap-20 items-center px-20 py-20">
-    <div class="w-4/12">
+  <section id="about" class="bg-pink flex md:flex-row flex-col justify-center gap-8 md:gap-20 items-center px-4 md:px-20 py-12 md:py-20">
+    <div class="w-8/12 rotate-2 md:rotate-1 md:w-4/12">
       <NuxtImg
         loading="lazy"
         :src="slice?.primary?.image.url"
@@ -14,7 +14,7 @@ defineProps(getSliceComponentProps<Content.TbmAboutSlice>());
         sizes="md:50vw"
       />
     </div>
-    <div class="w-6/12 tbm-about text-sm">
+    <div class="w-full md:w-6/12 tbm-about text-sm">
    <div class="text-base text-red font-bold rotate-2 flex">
   <span
     class="relative inline-block

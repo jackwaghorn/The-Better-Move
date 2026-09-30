@@ -4,7 +4,6 @@ const prismic = usePrismic();
 const { data: page } = await useAsyncData("better_move", () =>
     prismic.client.getSingle("better_move"),
 );
-console.log(page.value)
 </script>
 
 <template>

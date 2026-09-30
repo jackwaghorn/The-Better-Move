@@ -20,11 +20,11 @@ export default defineNuxtConfig({
       meta: [
         {
           name: "description",
-          content: "Night Time Economy Report 2026. An annual publication by the Nighttime Foundation. The Future of Nightlife begins here."
+          content: "How to bring dance back to the dancefloor."
         },
         {
           name: "author",
-          content: "Nighttime Foundation"
+          content: "VibeLab"
         },
         {
           property: "og:type",
@@ -32,15 +32,15 @@ export default defineNuxtConfig({
         },
         {
           name: "og:description",
-          content: "Night Time Economy Report 2026. An annual publication by the Nighttime Foundation. The Future of Nightlife begins here."
+          content: "How to bring dance back to the dancefloor"
         },
         {
           name: "twitter:description",
-          content: "Night Time Economy Report 2026. An annual publication by the Nighttime Foundation. The Future of Nightlife begins here."
+          content: "How to bring dance back to the dancefloor"
         },
         {
           name: "og:title",
-          content: "NTER 2026"
+          content: "The Better Move"
         },
         {
           property: "og:url",
@@ -55,12 +55,12 @@ export default defineNuxtConfig({
           content: "./preview.jpg"
         },
       ],
-      link: [
-        {
-          rel: "canonical",
-          href: "https://nter.report/"
-        }
-      ],
+      // link: [
+      //   {
+      //     rel: "canonical",
+      //     href: "https://nter.report/"
+      //   }
+      // ],
     }
   },
   compatibilityDate: '2025-07-15',

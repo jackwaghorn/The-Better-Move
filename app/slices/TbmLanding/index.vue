@@ -7,12 +7,12 @@ defineProps(getSliceComponentProps<Content.TbmLandingSlice>());
 <template>
   <section
     data-section="landing"
-    class="relative min-h-screen h-full w-full flex-col overflow-visible gap-10 z-1 flex items-center justify-center"
+    class="relative min-h-screen h-full w-full flex-col overflow-visible gap-4 md:gap-10 z-1 flex items-center justify-center"
     id="landing"
   >
     <!-- Shape one -->
     <svg
-      class="w-[40%] absolute top-[-40%] left-[-10%]"
+      class="w-[60%] md:w-[40%] absolute top-[-20%] md:top-[-40%] left-[-20%] md:left-[-10%]"
       viewBox="0 0 558 713"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +24,7 @@ defineProps(getSliceComponentProps<Content.TbmLandingSlice>());
     </svg>
     <!-- Shape two -->
     <svg
-      class="w-[40%] absolute top-[-40%] right-[-10%]"
+      class="w-[60%] right-[-30%] md:w-[40%] absolute top-[-20%] md:top-[-40%] md:right-[-10%]"
       viewBox="0 0 569 693"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@ defineProps(getSliceComponentProps<Content.TbmLandingSlice>());
 
     <!-- Shape three -->
     <svg
-      class="w-[40%] absolute bottom-[0%] left-[-10%]"
+      class="w-[60%] md:w-[40%] absolute bottom-[0%] left-[-10%]"
       viewBox="0 0 673 295"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +50,7 @@ defineProps(getSliceComponentProps<Content.TbmLandingSlice>());
 
     <!-- Shape four -->
     <svg
-      class="w-[35%] absolute top-[70%] right-[-10%]"
+      class="w-[60%] md:w-[35%] absolute top-[80%] md:top-[70%] right-[-25%] md:right-[-10%]"
       viewBox="0 0 724 563"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -61,13 +61,13 @@ defineProps(getSliceComponentProps<Content.TbmLandingSlice>());
       />
     </svg>
 
-    <h1 class="text-center text-brown text-[15vw] leading-[12vw] rotate-6 relative z-[1]">
+    <h1 class="text-center text-brown text-[20vw] leading-[16vw] md:text-[15vw] md:leading-[12vw] rotate-6 relative z-[1]">
       The <br />
       Better <br />
       Move
     </h1>
     <div
-      class="text-center text-brown text-base -rotate-3 relative z-[1] before:absolute before:inset-0 before:-z-[1] before:bg-yellow before:h-10/12 before:top-0 before:bottom-0 before:m-auto"
+      class="text-center text-brown mx-4 text-base -rotate-3 relative z-[1] before:absolute before:inset-0 before:-z-[1] before:bg-yellow before:h-10/12 before:top-0 before:bottom-0 before:m-auto"
     >
       {{ slice.primary.subtitle }}
     </div>

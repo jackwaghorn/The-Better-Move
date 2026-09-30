@@ -6,7 +6,7 @@ defineProps(getSliceComponentProps<Content.TbmIndexSlice>());
 <template>
   <section
     id="index"
-    class="bg-grey flex justify-center flex-col gap-12 items-center px-20 py-40"
+    class="bg-grey flex justify-center flex-col gap-12 items-center px-4 md:px-20 py-20 md:py-40"
   >
     <div class="w-full">
       <div
@@ -22,11 +22,11 @@ defineProps(getSliceComponentProps<Content.TbmIndexSlice>());
       </div>
     </div>
     <!-- Text -->
-    <div class="w-full flex items-start justify-center gap-12 relative z-10">
-      <div class="w-5/12 tbm-about text-sm">
+    <div class="w-full flex md:flex-row flex-col items-start justify-center gap-4 md:gap-12 relative z-10">
+      <div class="w-full md:w-5/12 tbm-about text-sm">
         <PrismicRichText class="" :field="slice.primary.column_one_body" />
       </div>
-      <div class="w-5/12 tbm-about text-sm">
+      <div class="w-full md:w-5/12 tbm-about text-sm">
         <PrismicRichText class="" :field="slice.primary.column_two_body" />
       </div>
     </div>

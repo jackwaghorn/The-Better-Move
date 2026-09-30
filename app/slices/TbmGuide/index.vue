@@ -7,10 +7,10 @@ defineProps(getSliceComponentProps<Content.TbmGuideSlice>());
 <template>
   <section
     id="guide"
-    class="bg-purple flex justify-center flex-col items-center px-20 py-40"
+    class="bg-purple flex justify-center flex-col items-center px-4 md:px-20 py-20 md:py-40"
   >
-    <div class="w-full flex items-center gap-12 relative z-10">
-      <div class="w-5/12">
+    <div class="w-full flex md:flex-row flex-col items-center gap-12 relative z-10">
+      <div class="w-full md:w-5/12">
         <div class="text-base text-red flex flex-col justify-center text-center items-center">
           <div class="rotate-2">The Better Move</div>
 
@@ -21,13 +21,13 @@ defineProps(getSliceComponentProps<Content.TbmGuideSlice>());
           </span>
         </div>
       </div>
-      <div class="w-6/12 tbm-guide text-sm">
+      <div class="w-full md:w-6/12 tbm-guide text-sm">
         <PrismicRichText class="" :field="slice.primary.body" />
       </div>
     </div>
 
-    <div class="w-full flex items-center justify-center -mt-20 ">
-      <div class="w-5/12 relative h-full">
+    <div class="w-full flex items-center justify-center md:-mt-20 ">
+      <div class="w-full md:w-5/12 relative h-full">
         <div class="absolute top-0 left-0 right-0 underline underline-offset-3 bottom-0 m-auto flex items-center justify-center text-center text-sm rotate-2 text-red">
 
         <a target="_blank" :href="slice.primary?.download_link?.text">
